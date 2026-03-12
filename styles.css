@@ -22,8 +22,8 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
-    width: 1920px;
-    height: 1080px;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     position: relative;
 }
@@ -37,7 +37,7 @@ body {
 
 .menu-header {
     background-color: var(--header-bg);
-    padding: 20px 40px;
+    padding: 2vh 4vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@ body {
 
 .menu-title {
     color: var(--title-color);
-    font-size: 45px;
+    font-size: clamp(24px, 5vh, 45px);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -59,40 +59,40 @@ body {
     flex: 1;
     overflow: hidden;
     position: relative;
-    padding: 0 40px;
+    padding: 0 4vw;
 }
 
 .menu-content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 40px;
-    padding-bottom: 50px;
+    gap: 4vh;
+    padding-bottom: 5vh;
 }
 
 .category {
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
 }
 
 .category-title {
-    font-size: 36px;
+    font-size: clamp(20px, 4vh, 36px);
     color: var(--text-main);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+    margin-bottom: 2vh;
+    padding-bottom: 1vh;
     border-bottom: 3px solid var(--title-color);
     display: inline-block;
 }
 
 .items-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3vh 3vw;
 }
 
 .item-card {
     background: var(--card-bg);
     border-radius: 12px;
-    padding: 20px;
+    padding: 2.5vh 2vw;
     display: flex;
     flex-direction: column;
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
@@ -103,24 +103,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 10px;
+    margin-bottom: 1.5vh;
 }
 
 .item-brand {
-    font-size: 20px;
+    font-size: clamp(14px, 2vh, 20px);
     font-weight: 500;
     color: var(--brand-color);
-    margin-bottom: 4px;
+    margin-bottom: 0.5vh;
 }
 
 .item-name {
-    font-size: 26px;
+    font-size: clamp(18px, 3vh, 26px);
     font-weight: 700;
     line-height: 1.2;
 }
 
 .item-price {
-    font-size: 30px;
+    font-size: clamp(20px, 3.5vh, 30px);
     font-weight: 700;
     color: var(--price-color);
 }
@@ -130,13 +130,13 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: auto;
-    padding-top: 15px;
+    padding-top: 2vh;
 }
 
 .strain-type {
-    padding: 6px 12px;
+    padding: 0.8vh 1.2vw;
     border-radius: 20px;
-    font-size: 16px;
+    font-size: clamp(12px, 1.8vh, 16px);
     font-weight: 600;
     text-transform: uppercase;
     color: white;
@@ -149,7 +149,14 @@ body {
 
 .item-details {
     display: flex;
-    gap: 15px;
-    font-size: 16px;
+    gap: 1.5vw;
+    font-size: clamp(12px, 1.8vh, 16px);
     color: #ccc;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
 }

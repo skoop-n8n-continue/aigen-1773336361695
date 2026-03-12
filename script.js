@@ -85,7 +85,7 @@ function initScrolling() {
     scrollContainer.appendChild(clone);
 
     let scrollPos = 0;
-    const speed = 0.8; // pixels per frame
+    const speed = 0.05 * (window.innerHeight / 100); // Speed adjusted based on screen height
 
     function scroll() {
         scrollPos += speed;
