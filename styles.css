@@ -1,13 +1,15 @@
 :root {
-    --bg-color: #f2f5f0;
-    --header-bg: #fffffe;
-    --title-color: #5b975a;
-    --price-color: #18570f;
-    --indica-bg: #d3eeff;
-    --sativa-bg: #ffebcc;
-    --hybrid-bg: #f3e1ff;
-    --default-bg: #eae9c3;
-    --text-main: #333333;
+    --bg-color: #1a0a0a;
+    --header-bg: #2d0505;
+    --title-color: #ff4d4d;
+    --price-color: #ff3333;
+    --indica-bg: #4a0000;
+    --sativa-bg: #660000;
+    --hybrid-bg: #800000;
+    --default-bg: #330000;
+    --text-main: #ffffff;
+    --card-bg: #2d0505;
+    --brand-color: #ff9999;
 }
 
 * {
@@ -17,7 +19,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Fallback for CooperHewitt */
+    font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-main);
     width: 1920px;
@@ -39,8 +41,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(255,0,0,0.1);
     z-index: 10;
+    border-bottom: 2px solid var(--title-color);
 }
 
 .menu-title {
@@ -49,6 +52,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
 }
 
 .scrolling-wrapper {
@@ -86,12 +90,13 @@ body {
 }
 
 .item-card {
-    background: white;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.04);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .item-header {
@@ -104,7 +109,7 @@ body {
 .item-brand {
     font-size: 20px;
     font-weight: 500;
-    color: #666;
+    color: var(--brand-color);
     margin-bottom: 4px;
 }
 
@@ -132,18 +137,19 @@ body {
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
+    color: white;
 }
 
-.type-indica { background-color: var(--indica-bg); }
-.type-sativa { background-color: var(--sativa-bg); }
-.type-hybrid { background-color: var(--hybrid-bg); }
-.type-default { background-color: var(--default-bg); }
+.type-indica { background-color: var(--indica-bg); border: 1px solid var(--title-color); }
+.type-sativa { background-color: var(--sativa-bg); border: 1px solid var(--title-color); }
+.type-hybrid { background-color: var(--hybrid-bg); border: 1px solid var(--title-color); }
+.type-default { background-color: var(--default-bg); border: 1px solid var(--title-color); }
 
 .item-details {
     display: flex;
     gap: 15px;
     font-size: 16px;
-    color: #555;
+    color: #ccc;
 }
