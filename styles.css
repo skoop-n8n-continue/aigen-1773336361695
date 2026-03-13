@@ -1,15 +1,15 @@
 :root {
-    --bg-color: #1a0a0a;
-    --header-bg: #2d0505;
-    --title-color: #ff4d4d;
-    --price-color: #ff3333;
-    --indica-bg: #4a0000;
-    --sativa-bg: #660000;
-    --hybrid-bg: #800000;
-    --default-bg: #330000;
+    --bg-color: #050a1a;
+    --header-bg: #05102d;
+    --title-color: #4d94ff;
+    --price-color: #3385ff;
+    --indica-bg: #00224a;
+    --sativa-bg: #003366;
+    --hybrid-bg: #004080;
+    --default-bg: #001a33;
     --text-main: #ffffff;
-    --card-bg: #2d0505;
-    --brand-color: #ff9999;
+    --card-bg: #05102d;
+    --brand-color: #99c2ff;
 }
 
 * {
@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 20px rgba(255,0,0,0.1);
+    box-shadow: 0 4px 20px rgba(0, 77, 255, 0.15);
     z-index: 10;
     border-bottom: 2px solid var(--title-color);
 }
@@ -52,7 +52,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+    text-shadow: 0 0 10px rgba(77, 148, 255, 0.5);
 }
 
 .scrolling-wrapper {
